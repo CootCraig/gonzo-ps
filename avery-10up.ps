@@ -2299,14 +2299,28 @@ def
 % horizrpts vertrpts hspacing vspacing hstart vstart ticklen useticks? landscape
 stepnrptparams /avery [2 5 3.5 inch 2.0 inch 0.76 inch 0.48 inch 50 true false] put
 
+/srfile [
+  { 25 15 (|21) cc }
+  { 25 15 (|22) cc }
+  { 25 15 (|23) cc }
+  { 25 15 (|24) cc }
+  { 25 15 (|25) cc }
+  { 25 15 (|26) cc }
+  { 25 15 (|27) cc }
+  { 25 15 (|28) cc }
+  { 25 15 (|29) cc }
+  { 25 15 (|210) cc }
+] def
+/customdata true def
+
 /repeatproc {
-  0 0 0.1 inch setgrid
-  33 18 showgrid
+  0.05 inch dup 0.1 inch setgrid
+  34 19 showgrid
 
   /font1 /Bookman-LightItalic 0.9 gonzofont
   /font2 /Bookman-DemiItalic 1.3 gonzofont 
 
-  /yinc 1.1 def
+  /yinc 1.4 def
 
   1 10
 (|2Sermon: The Law, Prophets 
@@ -2318,6 +2332,7 @@ Luke 24:36b-48
 Sunday April 19, 2015)
   cl
 
+  srfile runnum get exec
 } def
 
 (avery) stepandrepeat
